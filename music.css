@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  background-color: #000a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 8px blue;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  margin: 5px;
+  background-color: #444;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background-color: #333;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-menu li a {
+  margin: 0;
+  border: none;
+  text-align: left;
+}
+
+.content {
+  padding: 20px;
+}
+
+h2 {
+  border: 2px dashed white;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.gallery {
+  border: 2px dashed white;
+  padding: 15px;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 120px;
+  height: 160px;
+  border: 2px solid #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music World</title>
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+  <header>
+    <h1>Music World</h1>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="#" id="dropdownToggle">CATEGORY &#x25BC;</a>
+          <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a href="#">Tamil</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </li>
+        <li><a href="#">PRODUCTION</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">LOGIN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>→ Latest Album ...</h2>
+    <div class="gallery">
+      <img src="img1.jpg" alt="">
+      <img src="img2.jpg" alt="">
+      <img src="img3.jpg" alt="">
+      <img src="img4.jpg" alt="">
+      <img src="img5.jpg" alt="">
+      <img src="img1.jpg" alt="">
+      <img src="img2.jpg" alt="">
+    </div>
+
+    <h2>→ TOP 10 Songs ...</h2>
+    <div class="gallery">
+      <img src="img4.jpg" alt="">
+      <img src="img5.jpg" alt="">
+      <img src="img1.jpg" alt="">
+      <img src="img2.jpg" alt="">
+      <img src="img3.jpg" alt="">
+      <img src="img1.jpg" alt="">
+      <img src="img3.jpg" alt="">
+    </div>
+
+    <h2>→ Top 10 Artist ...</h2>
+    <div class="gallery">
+      <img src="img3.jpg" alt="">
+      <img src="img2.jpg" alt="">
+      <img src="img4.jpg" alt="">
+      <img src="img5.jpg" alt="">
+      <img src="img1.jpg" alt="">
+      <img src="img2.jpg" alt="">
+      <img src="img3.jpg" alt="">
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("dropdownToggle");
+    const menu = document.getElementById("dropdownMenu");
+
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    window.addEventListener("click", function (e) {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
